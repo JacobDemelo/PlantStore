@@ -1,0 +1,104 @@
+<!--
+    * Project: Final Project
+    * Author: Jacob Demelo
+    * Purpose: HTML for online plant store(Final Project)
+    * Date: 2022-04-20
+-->
+<!DOCTYPE html>
+<html>
+
+    <!--Head-->
+	<head>
+		<title>Jacob Demelo Project</title>
+
+        <!-- Javascript --> 
+        <script src="Jacob_Project_Javascript.js"></script> 
+
+        <!-- StyleSheet -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+<!--Body-->
+<body>
+
+    <!-- Title -->
+    <div class="title">
+        <h1>Online Plant Store</h1>
+        <label id="date"></label>
+    </div>
+    <!--Cart Button-->
+    <div class="review">
+        <a id="review" href="#" onclick="toggleFour()" class="button">Review Item</a>
+    </div>
+
+
+    <!--Cart Button-->
+    <div class="cart">
+        <a id="cart-value" href="#" onclick="toggle()" class="button">View Cart</a>
+    </div>
+
+    <!--Currency Selector-->
+    <div class="currency_div">
+        Currency: 
+        <img id="currencyFlag" class="currencyFlag" src="img/CAD.png" width="40px" height="20px"/>
+        <select id="currencySelector" onchange="displayStoreItems(), displayCartItems();;">
+            <option selected value="CAD">CAD</option>
+            <option value="USD">USD</option>
+        </select>
+    </div>
+
+    <!--Product Filter-->
+    <div class="products"> <legend>Store Items</legend>
+        <select id="displayFilter" onchange="displayStoreItems();">
+            <option>All</option>
+            <option>Tropical</option>
+            <option>Indoor</option>
+            <option>Bulb</option>
+            <option>Rare</option>
+        </select>
+        <br/>
+    </div>
+
+    <!--All Products-->
+    <div id="wrap" class="wrap">
+    
+    </div>
+    <!--PopUp For Cart-->
+    <div id="popup-add">
+    </div>
+
+    <!--PopUp For Item Details-->
+    <div id="popup-item">
+        <h1>Item Details</h1>
+        <a href="#" id="exit" onclick="toggleThree()">X</a>
+        <div id="item-details">
+
+        </div>
+    </div>
+
+    <!--PopUp For Item Details-->
+    <div id="popup-review">
+        <h1>Review An Item</h1>
+        <a href="#" id="exit" onclick="toggleFour()">X</a>
+        <div id="item-review">
+            <label for="productId">ProductId:</label>
+            <input type="text" id="productId" name="productId"><br><br>
+            <label for="reviewtb">Review:</label>
+            <input type="text" id="reviewtb" name="reviewtb"><br><br>
+            <label for="ratingtb">Rating out of 5:</label>
+            <input type="number" id="ratingtb" name="ratingtb"><br><br>
+            <a id="reviewed" href="#" onclick="reviewItem();" class="button">Review Item</a>
+        </div>
+    </div>
+
+    <!--PopUp For Cart-->
+    <div id="popup">
+        <h1>Shopping Cart</h1>
+        <a href="#" id="exit" onclick="toggle()">X</a>
+        <!--Title-->
+        <div id="shopping"></div>
+
+		<div id="cartCheckout"></div>
+    </div>
+</body>
+</html>

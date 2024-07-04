@@ -1,0 +1,1 @@
+The porject works on screen resolution of 1920px as min width
